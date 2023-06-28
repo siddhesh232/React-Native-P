@@ -29,6 +29,7 @@ function MealsOverViewScreen({ route, navigation }){
     function renderMealItem(itemData){
         const item = itemData.item;   // helper const, instead of writing itemData.item we will write item
         const mealItemProps = {
+            id: item.id,
             title: item.title,
             imageUrl: item.imageUrl,
             affordability: item.affordability,

@@ -14,10 +14,6 @@ import Colors from './constants/colours';
 
 SplashScreen.preventAutoHideAsync();
 
-
-
-
-
 export default function App() {
   const [userNumber, setUserNumber] = useState();
   const [gameIsOver, setGameIsOver] = useState(true);
