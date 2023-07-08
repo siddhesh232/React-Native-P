@@ -1,12 +1,13 @@
 import {Image, StyleSheet, Text, View, ScrollView } from "react-native";
+
+import meal from "../models/meal";
 import {MEALS} from "../data/dummy-data";
-import MealDetails from "../components/MealDetails";
-import Subtitle from "../components/MealDetail/Subtitle";
 import List from "../components/MealDetail/List";
 import IconButton from '../components/IconButton';
 import {useContext, useLayoutEffect} from "react";
+import MealDetails from "../components/MealDetails";
+import Subtitle from "../components/MealDetail/Subtitle";
 import {FavoritesContext} from "../store/context/favorites-context";
-import meal from "../models/meal";
 
 function MealDetailScreen({ route, navigation }){
     const favoriteMealsCtx = useContext(FavoritesContext);
@@ -22,7 +23,7 @@ function MealDetailScreen({ route, navigation }){
         } else{
             favoriteMealsCtx.addFavorite(mealId);
         }
-    };
+    }
 
    useLayoutEffect(() => {
        navigation.setOptions({
